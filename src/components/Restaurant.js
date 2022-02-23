@@ -1,9 +1,10 @@
 import React,{useState,useEffect} from 'react'
 import Card from './Card'
 import Navbar from './Navbar'
-import { NavLink } from 'react-router-dom'
+import {BrowserRouter,Routes,Route} from "react-router-dom";
 import './Restaurant.css'
 import Axios  from 'axios'
+import RestaurantInfo from './RestaurantInfo'
 export default function Restuarent() {
   const [allRestaurant,setRestaurant]=useState([]);
   const [filterRestaurant,setFilterRestaurant]=useState([]);
@@ -44,11 +45,11 @@ export default function Restuarent() {
               <div className='t-heading mt-4 ml-4'>
                     Cafes
               </div>
-              <div class="dropdown mt-3 ml-4">
-                  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown link
+              <div className="dropdown mt-3 ml-4">
+                  <a className="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Fity City
                   </a>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <div className="dropdown-menu"  aria-labelledby="dropdownMenuLink">
                     <a className="dropdown-item" onClick={()=>{filterCity("All")}}>All</a>
                     <a className="dropdown-item" onClick={()=>{filterCity("Ahemdabad")}}>Ahemndabad</a>
                     <a className="dropdown-item" onClick={()=>{filterCity("Anand")}}>Anand</a>

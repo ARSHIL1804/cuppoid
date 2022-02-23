@@ -27,7 +27,7 @@ export default function Home() {
   useEffect(() => {
     GetTopFive();
   }, [])
-  
+  console.log("grngkr")
   return (
     <div className='Home bg-light'>
           <Navbar/>
@@ -56,6 +56,7 @@ export default function Home() {
               </div>
          </div>       
          <div className='footer mt-4'></div>
+
     </div>
   )
 }

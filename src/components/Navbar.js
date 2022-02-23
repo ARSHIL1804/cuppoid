@@ -13,19 +13,16 @@ export default function Navbar() {
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
                   <NavLink  className={({isActive})=>{
-                    console.log(isActive,(!isActive?"":'current'));
                     return 'nav-link '+(!isActive?"":"current")
                   }} to='/'>Home </NavLink>
                 </li>
                 <li className="nav-item ">
                   <NavLink  className={({isActive})=>{
-                    console.log(isActive,(!isActive?"":'current'));
                     return 'nav-link '+(!isActive?"":"current")
                   }}  to="/restaurant">Restaurants</NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink  className={({isActive})=>{
-                    console.log(isActive,(!isActive?"":'current'));
                     return 'nav-link '+(!isActive?"":"current")
                   }}  to="/profile">Pofile</NavLink>
                 </li>
